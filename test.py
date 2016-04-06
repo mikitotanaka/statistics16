@@ -7,4 +7,5 @@ data1=range(0,10)
 data2=range(0,100)
 print data1
 print data2
+print "ok"
 
