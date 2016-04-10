@@ -1,10 +1,5 @@
-# 数理統計学演習
+# 数理統計学演習2016
 ====
 
-Githubのテスト
+pythonサンプルコード
 
-##メンバー
-
-*testmember
-
-<mikito@astr.tohoku.ac.jp>
