@@ -8,8 +8,8 @@ import matplotlib.pyplot as pyplot
 x=numpy.arange(-3,3,0.1)
 y=numpy.sin(x)
 pyplot.plot(x,y)
-pyplot.show()
 pyplot.savefig('day1_1.png')
+pyplot.show()
 
 # drawing an external data.
 
@@ -21,5 +21,5 @@ pyplot.xticks(ticks, ['%s/%s'%(data['date'][i].split('/')[1],data['date'][i].spl
 pyplot.xlabel('Date')
 pyplot.ylabel('hours')
 pyplot.title('Sunshine')
-pyplot.show()
 pyplot.savefig('day1_2.png')
+pyplot.show()
