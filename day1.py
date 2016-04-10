@@ -5,7 +5,8 @@ import matplotlib.pyplot as pyplot
 
 # drawing a math function.
 
-x=numpy.arange(-3,3,0.1)
+#x=numpy.arange(-3,3,0.1)
+x=numpy.linspace(-numpy.pi,numpy.pi,256)
 y=numpy.sin(x)
 pyplot.plot(x,y)
 pyplot.savefig('day1_1.png')
