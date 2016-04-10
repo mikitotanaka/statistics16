@@ -1,4 +1,4 @@
-# statistics16
+# 数理統計学演習
 ====
 
 Githubのテスト
@@ -6,3 +6,5 @@ Githubのテスト
 ##メンバー
 
 *testmember
+
+<mikito@astr.tohoku.ac.jp>
