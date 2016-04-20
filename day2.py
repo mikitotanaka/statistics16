@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-import sys
 import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
