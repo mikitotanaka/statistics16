@@ -23,7 +23,6 @@ pyplot.text(60,5e10,'r = %.3f'%(corr1[0,1]),ha='left',va='center', fontsize=18, 
 pyplot.xticks(fontsize=13, fontname='serif')
 pyplot.yticks(fontsize=13, fontname='serif')
 pyplot.subplot(2,1,2)
-#pyplot.plot(data[:,13],data[:,2],'bo')
 pyplot.errorbar(data[:,13],data[:,2],yerr=[data[:,2]-data[:,3],data[:,4]-data[:,2]],fmt='bo')
 pyplot.xscale("log")
 pyplot.yscale("log")
