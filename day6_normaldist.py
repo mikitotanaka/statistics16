@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import numpy,math
-from scipy.stats import norm
+import scipy.stats as stats
 import matplotlib.pyplot as pyplot
+import seaborn
 
 def func_gauss(mu,sigma,x):
         return norm.pdf(x, loc=mu, scale=sigma)
@@ -20,8 +21,8 @@ def gauss_dist():
 
         xlab=[]
         for i in range(-6,7):
-                a=norm.cdf(x=sigma*i,loc=mu,scale=sigma)
-                b=norm.cdf(x=-sigma*i,loc=mu,scale=sigma)
+                a=stats.norm.cdf(x=sigma*i,loc=mu,scale=sigma)
+                b=stats.norm.cdf(x=-sigma*i,loc=mu,scale=sigma)
                 per=(a-b)*100
                 print "%dsigma = %f" % (i,per)
                 ax1.axvline(x=i, color='k', ls='--')
@@ -70,7 +71,34 @@ def err_dist():
 	pyplot.savefig("day6_errfunc.png") # output to png
         pyplot.show()
 
+def likelihood():
+
+        seaborn.set_style("white")
+        x=numpy.linspace(-6,6,2000)
+        fig=pyplot.figure(figsize=(15,9))
+        pyplot.plot(x,stats.norm.pdf(x,loc=0,scale=1),lw=3)
+        pyplot.plot(x,stats.norm.pdf(x,loc=-2,scale=1),lw=3)
+        pyplot.plot(x,stats.norm.pdf(x,loc=2,scale=1),lw=3)
+        pyplot.tick_params(labelbottom='off')
+        pyplot.tick_params(labelleft='off')
+        pyplot.xticks(range(0))
+        pyplot.yticks(range(0))
+        seaborn.despine()
+        pyplot.savefig("likelihood.png")
+        pyplot.show()
+
 if __name__== "__main__":
 
-        gauss_dist()
-        err_dist()
+        #gauss_dist()
+        #err_dist()
+        #likelihood()
+
+        seaborn.set_style("white")
+        x=numpy.linspace(0,1,1000)
+        fig=pyplot.figure(figsize=(15,9))
+        pyplot.plot(x,(x**2)*(1-x)**18,lw=3)
+        pyplot.xticks(fontsize=20, fontname='serif')
+        pyplot.yticks(range(0))
+        seaborn.despine()
+        pyplot.savefig("likelihood2.png")
+        pyplot.show()
